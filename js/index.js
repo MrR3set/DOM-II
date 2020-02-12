@@ -1,8 +1,14 @@
 // Your code goes here
 const allImg = document.querySelectorAll("img");
 
-const header = document.querySelector("header")[0];
-header.style.zIndex = "1"
+//Header index
+const mNav = document.querySelector(".main-navigation");
+mNav.style.zIndex = "1";
+
+mNav.addEventListener("click", () => {
+    mNav.style.transform = `scaleY(${Math.random() * 2 + 0.5})`;
+})
+
 
 allImg.forEach(elem => {
     elem.addEventListener("mouseenter", (event) => {
